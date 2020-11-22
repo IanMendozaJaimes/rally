@@ -1,0 +1,20 @@
+{
+    "questions": [
+        {
+            "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel efficitur ante, in tincidunt lacus. Nunc vitae velit eget risus blandit pulvinar. Quisque magna libero, pulvinar efficitur congue sed, posuere non ligula. Phasellus eu sem a sapien molestie fermentum et quis nulla. Vestibulum efficitur mi quis massa scelerisque feugiat. Maecenas tincidunt, nisi sit amet mollis imperdiet, neque dui auctor enim, vel mattis nunc tellus eget orci. Donec porttitor vehicula purus, sed congue justo mollis eu. Suspendisse urna metus, porta ut hendrerit vel, scelerisque a lacus. Duis odio ex, consequat in varius quis, maximus a nibh.",
+            "answer": "lorem"
+        },
+        {
+            "question": "Integer a sapien ut ex placerat scelerisque in et quam. Pellentesque rhoncus eros vel nibh euismod vehicula. In vel accumsan risus, vel tempus arcu. Etiam imperdiet nibh in auctor eleifend. Nullam vitae mi ut nisl facilisis interdum. Sed sit amet tortor ac tellus pretium ullamcorper a vel metus. Donec sed ultrices velit. Suspendisse non lacus eget turpis consequat pretium. Sed porttitor eget ex et interdum. Quisque vulputate vulputate risus et iaculis. Phasellus a velit lorem. Integer lacinia quam in faucibus sodales. Etiam et rutrum sem. Ut dapibus libero efficitur dictum placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
+            "answer": "lorem"
+        }
+    ],
+    "challenges": [
+        "Toma una foto de algo que este cerca de ti",
+        "Tomale una foto a tu mascota",
+        "Tomale una foto a tu bebida favorita",
+        "Busca una foto en google sobre pingüinos"
+    ],
+    "time": 10,
+    "goal": 1
+}

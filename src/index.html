@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rally</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+    <div class="alert-screen invisible"></div>
+    <div class = "questions-timer-container flex-container-nowrap flex-centered">
+        <p class = "questions-timer flex-child-6 no-margin"></p>
+    </div>
+
+    <section class = "start">
+        <div class="start-participants-container flex-container-nowrap">
+            <div class="flex-child-9 flex-container">
+                <div class="team-number flex-child-9">
+                    <p class="no-margin start-participants-desc start-participants-desc2 inline-block">Número de equipo:</p>
+                    <input class="start-team input-text inline-block child-3" type="text" value="2"></inpu>
+                </div>
+                <p class="no-margin start-participants-desc start-participants-desc2 flex-child-9">Participantes:</p>
+                <div class="start-participants flex-child-9"></div>
+            </div>
+            <div class="flex-child-3">
+                <button class="start-add accept-button">Añadir participante</button>
+            </div>
+        </div>
+        <div class="start-button-container flex-container-nowrap flex-centered">
+            <button class = "start-button normal-button flex-child-6">
+                Iniciar Rally!
+            </button>
+        </div>
+    </section>
+
+    <section class = "questions invisible">
+        <div class="flex-child-9">
+            <div>
+                <p class="questions-question"></p>
+            </div>
+            <div>
+                <div class = "validation-container flex-container">
+                    <input type="text" placeholder="Respuesta" class = "questions-answer input-text flex-child-9 margin-bottom">
+                    <button class = "questions-validate accept-button flex-child-9">Validar</button>
+                </div>
+                <div class = "wrong-container invisible">
+                    <button class="retry-button accept-button flex-child-9 bcb">Volver a intentar</button>
+                    <button class="begin-challenge-button normal-button flex-child-9">Hacer un reto, para saltar esta pregunta</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "challenges flex-centered invisible">
+        <div class="flex-child-9">
+            <p class="challenges-description text-aling-center">Challenge description</p>
+        </div>
+        <div class="flex-child-9 flex-container-nowrap flex-centered margin-bottom">
+            <button class="challenge-submit normal-button child-9">Subir foto</button>
+            <div class="challenge-photo child-9 invisible">
+                <img class="challenge-image flex-child-9 child-9 margin-bottom">
+                <button class="challenge-resubmit normal-button flex-child-9">Cambiar de foto</button>
+            </div>
+        </div>
+        <div class="flex-child-9 flex-container-nowrap flex-centered">
+            <button class="challenges-done accept-button child-9">
+                Reto completo!
+            </button>
+        </div>
+    </section>
+
+    <section class="summary invisible">
+        <div class="margin-bottom">
+            <p class="text-aling-center">Este es el final del rally, felicidades!</p>
+        </div>
+        <div>
+            <div class="pdf">
+                <p class="text-aling-center">Equipo número: <span class="pdf-team"></span></p>
+                <p class="text-aling-center">Preguntas correctas: <span class="pdf-num-answers"></span></p>
+                <p class="text-aling-center">Tiempo: <span class="summary-time"></span></p>
+                <div class="pdf-participants margin-bottom">
+                    <p class="summary-section">Participantes</p>
+                </div>
+                <div class="pdf-questions">
+                    <p class="summary-section">Reporte de las preguntas</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="summary-export accept-button">
+                Exportar reporte
+            </button>
+        </div>
+    </section>
+
+    <template id="template-participant">
+        <div class="start-participant">
+            <input type="text" placeholder="Nombre del participante" class="participant input-text child-9" value="Mitzi">
+        </div>
+    </template>
+
+    <template id="template-alert">
+        <div class="alert-container">
+            <p class="alert-message"></p>
+        </div>
+    </template>
+
+    <template id="template-pdf-participant">
+        <p class="pdf-participant margin-left-bottom"></p>
+    </template>
+
+    <template id="template-pdf-question">
+        <div class="pdf-question-container margin-bottom">
+            <p class="pdf-question text-aling-justify">Pregunta: <br> <span class="pdf-question-desc pdf-q"></span></p>
+            <p class="pdf-status">Estatus: <span class="pdf-status-desc"></span></p>
+            <div class="pdf-challenge-container invisible">
+                <p class="pdf-challenge text-aling-justify">Reto: <br> <span class="pdf-challenge-desc pdf-q"></span></p>
+                <p>Prueba:</p>
+                <img class="pdf-challenge-img child-9 pdf-img">
+            </div>
+        </div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>
