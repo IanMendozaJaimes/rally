@@ -107,6 +107,7 @@ function showSummary () {
             clone.querySelector('.pdf-challenge-container').classList.remove('invisible')
             clone.querySelector('.pdf-challenge-desc').innerHTML = challenges[challengeId]
             clone.querySelector('.pdf-challenge-img').src = imagePath
+            console.log('image path:', imagePath)
         } else {
             clone.querySelector('.pdf-challenge-container').classList.add('invisible')
             status.innerHTML = 'Resuelta'
