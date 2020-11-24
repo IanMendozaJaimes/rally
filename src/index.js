@@ -129,7 +129,7 @@ async function generateSummary () {
         buttonLabel: 'Seleccionar', 
         properties
     }).then(file => {
-        console.log(file)
+        console.log(file, file.filePaths, file.filePaths[0])
         const filePath = path.join(file.filePaths[0], 'reporteRally.pdf')
         const summary = document.querySelector('.pdf')
         const options = {
@@ -146,6 +146,7 @@ async function generateSummary () {
         let template = fs.readFileSync(path.join(__dirname, '../src/report-template.html'), 
             { encoding:'utf8', flag:'r' })
         template = template.replace('{{report}}', summary.outerHTML)
+        template = template.replace('\\', '/')
 
         pdf.create(template, options).toFile(filePath, 
             function(err, res) {

@@ -204,3 +204,7 @@ textarea:focus, input:focus, button:focus{
     border-bottom: solid;
     border-bottom-width: thin;
 }
+
+.pdf-img {
+    max-width: 300px;
+}
