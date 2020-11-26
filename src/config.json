@@ -1,12 +1,44 @@
 {
     "questions": [
         {
-            "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel efficitur ante, in tincidunt lacus. Nunc vitae velit eget risus blandit pulvinar. Quisque magna libero, pulvinar efficitur congue sed, posuere non ligula. Phasellus eu sem a sapien molestie fermentum et quis nulla. Vestibulum efficitur mi quis massa scelerisque feugiat. Maecenas tincidunt, nisi sit amet mollis imperdiet, neque dui auctor enim, vel mattis nunc tellus eget orci. Donec porttitor vehicula purus, sed congue justo mollis eu. Suspendisse urna metus, porta ut hendrerit vel, scelerisque a lacus. Duis odio ex, consequat in varius quis, maximus a nibh.",
-            "answer": "lorem"
+            "question": "Todas las cajas de un cierto cereal tienen premio, sin embargo la probabilidad de que una caja contenga el mejor premio es de 0.002. Si en un camión se transportan 2410 cajas ¿cuál es la probabilidad de que haya desde 10 hasta 12 de mejores premios?",
+            "answer": "0.0"
         },
         {
-            "question": "Integer a sapien ut ex placerat scelerisque in et quam. Pellentesque rhoncus eros vel nibh euismod vehicula. In vel accumsan risus, vel tempus arcu. Etiam imperdiet nibh in auctor eleifend. Nullam vitae mi ut nisl facilisis interdum. Sed sit amet tortor ac tellus pretium ullamcorper a vel metus. Donec sed ultrices velit. Suspendisse non lacus eget turpis consequat pretium. Sed porttitor eget ex et interdum. Quisque vulputate vulputate risus et iaculis. Phasellus a velit lorem. Integer lacinia quam in faucibus sodales. Etiam et rutrum sem. Ut dapibus libero efficitur dictum placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-            "answer": "lorem"
+            "question": "Se estima que el 2% de la población mundial tiene ojos de color verdes. En una muestra seleccionada al azar de 222 personas se encuentran a 9 personas con estas características. ¿A cuántas desviaciones estándar se encuentra el número de personas con esta característica encontrados en la muestra del valor promedio?",
+            "answer": "0.0"
+        },
+        {
+            "question": "Un basquetbolista sabe por experiencia que encesta aproximadamente el 70% de los tiros libres que lanza a la canasta. ¿Cuál será la probabilidad de que el quinto tiro que lanza sea justo el tercero que encesta?",
+            "answer": "0.0"
+        },
+        {
+            "question": "Un cierto hilo contiene en promedio 2 fallas cada 10m. La falla puede ocasionar que al utilizar el hilo éste se rompa con una probabilidad de 0.25, haciendo que las piezas unidas se descosan. Para confeccionar una mochila se requiere 1 metro de este hilo. Calcule la probabilidad de que ninguna de las piezas de una mochila cualquiera se descosan.",
+            "answer": "0.0"
+        },
+        {
+            "question": "El número promedio de camiones que llegan en un día a un depósito de camiones en cierta ciudad es, según se sabe, 12. ¿Cuál es la probabilidad de que en un día dado lleguen menos de 9 camiones a este depósito?",
+            "answer": "0.0"
+        },
+        {
+            "question": "Trabajo en equipo. Para ganar una competencia, un equipo debe contestar correctamente 6 preguntas. El equipo consta de cinco integrantes, de manera que con que uno obtenga la respuesta en equipo avanza a la siguiente etapa, en caso contrario se da al equipo una pregunta nueva más para seguir participando. ¿Cuál es el número promedio de intentos para ganar la prueba? Suponga que la probabilidad de que una persona conteste una pregunta de manera correcta se mantiene constante al valor de 0.30.",
+            "answer": "0.0"
+        },
+        {
+            "question": "Un grupo de 16 niños juegan al teléfono descompuesto. La probabilidad de que el mensaje sea mal transmitido o recibido de un niño a otro se supone constante al valor de 0.13. Encuentre la probabilidad de que el grupo gane el juego. Suponga que el primer niño lee bien el mensaje por lo que cada línea consta de 16 etapas de transmisión/recepción y que los fallos ocurren de manera independiente.",
+            "answer": "0.0"
+        },
+        {
+            "question": "Si la probabilidad es de 0.40 de que un conductor de automóvil de la ciudad de México se pase la luz roja en el momento en que ésta se acaba de poner, ¿cuál es la probabilidad de que el décimo conductor que llega a una esquina en el instante en que se acaba de poner la luz roja sea el tercero en pasarse el alto?",
+            "answer": "0.0"
+        },
+        {
+            "question": "Aproximadamente 95% de los automovilistas de la Ciudad de México invaden la zona peatonal cuando se detienen en un crucero ante la luz roja. Determine la probabilidad de que en un momento dado, de cinco automóviles que se aproximan al crucero en el que se acaba de poner una luz roja, por lo menos uno de ellos respete la zona de cruce peatonal.",
+            "answer": "0.0"
+        },
+        {
+            "question": "Un puesto de periódicos pidió seis revistas. Sea X el número de personas que acuden a la tienda a comprar esta revista. Suponga que X tiene una distribución de Poisson con un valor esperado de tres personas. ¿Cuál es el valor esperado de revistas vendidas?",
+            "answer": "0.0"
         }
     ],
     "challenges": [
@@ -16,5 +48,5 @@
         "Busca una foto en google sobre pingüinos"
     ],
     "time": 10,
-    "goal": 1
+    "goal": 2
 }

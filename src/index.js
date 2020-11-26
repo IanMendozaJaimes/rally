@@ -38,6 +38,7 @@ const sectionStartParticipants = document.querySelector('.start-participants')
 
 const sectionQuestions = document.querySelector('.questions')
 const sectionQuestionsQuestion = document.querySelector('.questions-question')
+const sectionQuestionsNumber = document.querySelector('.questions-number')
 const sectionQuestionsValidate = document.querySelector('.questions-validate')
 const sectionQuestionsAnswer = document.querySelector('.questions-answer')
 const sectionQuestionsTimer = document.querySelector('.questions-timer')
@@ -98,6 +99,7 @@ function showSummary () {
     for (let i = 1; i < questionNumber; i++) {
         const questionTemplate = document.querySelector('#template-pdf-question')
         const clone = document.importNode(questionTemplate.content, true)
+        clone.querySelector('.pdf-question-number').innerHTML = i
         clone.querySelector('.pdf-question-desc').innerHTML = questions[i-1].question
         const status = clone.querySelector('.pdf-status-desc')
         if (skipedQuestions[i]) {
@@ -161,6 +163,7 @@ async function generateSummary () {
 }
 
 function renderQuestion () {
+    sectionQuestionsNumber.innerHTML = `Pregunta número ${questionNumber}`
     sectionQuestionsQuestion.innerHTML = questions[questionNumber - 1].question
     sectionQuestionsAnswer.value = ''
     showElement(sectionQuestionsValidationContainer, 'flex-container')
