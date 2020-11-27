@@ -321,7 +321,7 @@ sectionStartButton.addEventListener('click', async () => {
     teamNumber = team.value
 
     if (teamNumber.length === 0) {
-        showAlert('El equipo no tiene nombre', alertTypes.error)
+        showAlert('El equipo no tiene número', alertTypes.error)
         return
     }
     
