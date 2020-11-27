@@ -208,3 +208,14 @@ textarea:focus, input:focus, button:focus{
 .pdf-img {
     max-width: 300px;
 }
+
+.back1 {
+    background-repeat: repeat;
+}
+
+.back2 {
+    background-color: rgba(94, 174, 176, 0.85);
+    color: white;
+    padding: 0.5em 0;
+}
+

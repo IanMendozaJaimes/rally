@@ -18,7 +18,7 @@
             <div class="flex-child-9 flex-container">
                 <div class="team-number flex-child-9">
                     <p class="no-margin start-participants-desc start-participants-desc2 inline-block">Número de equipo:</p>
-                    <input class="start-team input-text inline-block child-3" type="text" value="2"></inpu>
+                    <input class="start-team input-text inline-block child-3" type="text" value=""></inpu>
                 </div>
                 <p class="no-margin start-participants-desc start-participants-desc2 flex-child-9">Participantes:</p>
                 <div class="start-participants flex-child-9"></div>
@@ -77,9 +77,13 @@
         </div>
         <div>
             <div class="pdf">
-                <p class="text-aling-center">Equipo número: <span class="pdf-team"></span></p>
-                <p class="text-aling-center">Preguntas correctas: <span class="pdf-num-answers"></span></p>
-                <p class="text-aling-center">Tiempo: <span class="summary-time"></span></p>
+                <div class="back1">
+                    <div class="back2">
+                        <p class="text-aling-center flex-child-9">Equipo número: <span class="pdf-team"></span></p>
+                        <p class="text-aling-center flex-child-9">Preguntas correctas: <span class="pdf-num-answers"></span></p>
+                        <p class="text-aling-center flex-child-9">Tiempo: <span class="summary-time"></span></p>
+                    </div>
+                </div>
                 <div class="pdf-participants margin-bottom">
                     <p class="summary-section">Participantes</p>
                 </div>
@@ -97,7 +101,7 @@
 
     <template id="template-participant">
         <div class="start-participant">
-            <input type="text" placeholder="Nombre del participante" class="participant input-text child-9" value="Mitzi">
+            <input type="text" placeholder="Nombre del participante" class="participant input-text child-9" value="">
         </div>
     </template>
 

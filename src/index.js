@@ -6,7 +6,6 @@ const { dialog } = require('electron').remote
 const ipc = require('electron').ipcRenderer
 
 const path = require('path')
-const { hideAll } = require('bootbox')
 const directory = '../images/'
 
 const alertTypes = {
@@ -85,6 +84,9 @@ function showSummary () {
     document.querySelector('.pdf-team').innerHTML = teamNumber
     document.querySelector('.summary-time').innerHTML = formatTime((time * 60) - timer)
     document.querySelector('.pdf-num-answers').innerHTML = correctQuestions.length
+    document.querySelector('.back1').style.backgroundImage = `url('file:///${path.join(__dirname, '/pattern.jpg')}')`.replace(/\\/g, '/')
+
+    console.log('url image:', `url('file:///${path.join(__dirname, '/pattern.jpg')}')`.replace(/\\/g, '/'))
 
     hiddeElement(sectionQuestionsTimerContainer, 'flex-container-nowrap')
     hiddeElement(sectionQuestionsTimerContainer, 'questions-timer-container')
@@ -135,28 +137,52 @@ async function generateSummary () {
         console.log(file, file.filePaths, file.filePaths[0])
         const filePath = path.join(file.filePaths[0], 'reporteRally.pdf')
         const summary = document.querySelector('.pdf')
-        const options = {
-            format: 'Letter',
-            base: path.join('file:/', __dirname, '../src').replace('file:/', 'file:///'),
-            border: {
-                top: '1.5in',
-                right: '1in',
-                bottom: '1.5in',
-                left: '1in'
-            }
-        }
+        // const options = {
+        //     format: 'Letter',
+        //     base: path.join('file:/', __dirname, '../src').replace('file:/', 'file:///'),
+        //     border: {
+        //         top: '1.5in',
+        //         right: '1in',
+        //         bottom: '1.5in',
+        //         left: '1in'
+        //     }
+        // }
 
         let template = fs.readFileSync(path.join(__dirname, '../src/report-template.html'), 
             { encoding:'utf8', flag:'r' })
         template = template.replace('{{report}}', summary.outerHTML)
-        template = template.replace('\\', '/')
-
-        pdf.create(template, options).toFile(filePath, 
-            function(err, res) {
-                if (err) return console.log(err);
-                console.log(res)
+       
+        let conversion = require("phantom-html-to-pdf")()
+        conversion({
+            html: template,
+            allowLocalFilesAccess: true,
+            paperSize: {
+                format: 'Letter',
+                margin: {
+                    top: '1.5in',
+                    right: '1.5in',
+                    bottom: '1.5in',
+                    left: '1.5in'
+                }
             }
-        ) 
+        }, function(err, pdf) {
+          let output = fs.createWriteStream(filePath)
+          console.log(pdf.logs)
+          console.log(pdf.numberOfPages)
+            // since pdf.stream is a node.js stream you can use it
+            // to save the pdf to a file (like in this example) or to
+            // respond an http request.
+          pdf.stream.pipe(output);
+          showAlert('El reporte fue generado exitosamente', alertTypes.success);
+        })
+
+        // pdf.create(template, options).toFile(filePath, 
+        //     function(err, res) {
+        //         if (err) return console.log(err);
+        //         console.log(res)
+        //     }
+        // ) 
+
     }).catch(err => { 
         console.log(err) 
     })
@@ -234,7 +260,7 @@ function uploadPhoto () {
         properties
     }).then(file => {
         if (!file.canceled) { 
-          imagePath = file.filePaths[0].toString()
+          imagePath = 'file:///' + file.filePaths[0].toString()
           hiddeElement(sectionChallengesSubmit)
 
           document.querySelector('.challenge-image').src = imagePath
